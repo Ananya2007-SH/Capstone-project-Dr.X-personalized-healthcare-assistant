@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll_view_main"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:id="@+id/layout_main">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:itemTextColor="@color/white"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/Label.toolbar"
+                android:singleLine="true"
+                android:text="Title"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="See how your medications stack up against each other"
+            />
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Compare Drugs"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_border_layout"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:hint="Enter a drug name"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/hint_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:textColor="@android:color/darker_gray"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Ex: Dupixent vs Fasenra"
+            />
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            android:background="@drawable/round_border_layout"/>
+        <LinearLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:text="Loading..."
+                android:textColorHint="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/drug_side_effects_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_margin="16dp"
+            android:textFontWeight="400"
+            android:visibility="gone"/>
+    </LinearLayout>
+</ScrollView>
